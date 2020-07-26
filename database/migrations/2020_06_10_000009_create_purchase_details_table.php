@@ -17,8 +17,11 @@ class CreatePurchaseDetailsTable extends Migration {
 			$table->increments('id');
 			$table->integer('purchase_id')->nullable();
 			$table->integer('product_id')->nullable();
-			$table->float('quantity', 10, 0)->nullable();
+			$table->float('quantity', 10, 0)->default(1);
 			$table->decimal('price', 10, 0)->nullable();
+
+            $table->foreign('purchase_id')->references('id')->on('purchases');
+            $table->foreign('product_id')->references('id')->on('products');
 		});
 	}
 

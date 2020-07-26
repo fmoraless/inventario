@@ -3,16 +3,20 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+//use Illuminate\Database\Eloquent\Relations\Pivot;
 
 
 
 class PurchaseDetail extends Model
 {
+    protected $table ='purchase_details';
+
     public $timestamps = false;
 
-    public function purchase()
-    {
-        $this->belongsTo(Purchase::class);
-    }
+    protected $fillable = [
+      'purchase_id',
+      'product_id',
+      'quantity'
+    ];
 
 }
