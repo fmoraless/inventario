@@ -148,6 +148,7 @@ return [
             'TCG\\Voyager\\Widgets\\UserDimmer',
             'TCG\\Voyager\\Widgets\\PageDimmer',
             'App\\Widgets\\ProductsDimmer',
+            'App\\Widgets\\CategoryDimmer',
         ],
 
     ],
