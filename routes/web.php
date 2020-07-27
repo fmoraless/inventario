@@ -20,3 +20,9 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 
 });
+
+Route::get('charts', 'ChartController@index')->name('chart.index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

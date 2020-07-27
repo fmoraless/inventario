@@ -116,6 +116,11 @@
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/vendor/kylekatarnls/laravel-carbon-2" />
+      <path value="$PROJECT_DIR$/vendor/umpirsky/language-list" />
+      <path value="$PROJECT_DIR$/vendor/jenssegers/date" />
+      <path value="$PROJECT_DIR$/vendor/jlawrence/eos" />
+      <path value="$PROJECT_DIR$/vendor/consoletvs/support" />
+      <path value="$PROJECT_DIR$/vendor/consoletvs/charts" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
