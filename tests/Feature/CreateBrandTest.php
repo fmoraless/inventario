@@ -16,12 +16,12 @@ class CreateBrandTest extends TestCase
     /** @test */
     public function un_usuario_autenticado_puede_crear_marcas()
     {
-        //$this->withoutExceptionHandling();
+        $this->withoutExceptionHandling();
 
         $user = factory(User::class)->create();
         $this->actingAs($user);
 
-        $this->post(url('admin/marcas/create'),['name' => 'Soprole']);
+        $this->post(route('voyager.marcas.create'),['name' => 'Soprole']);
 
         $this->assertDatabaseHas('brands', [
             'name' => 'Soprole'
