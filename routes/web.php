@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/firstchart', function () {
+    return view('chart');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
