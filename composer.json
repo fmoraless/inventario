@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2.5",
+        "php": "^7.4",
         "caouecs/laravel-lang": "~3.0",
         "consoletvs/charts": "7.*",
         "fruitcake/laravel-cors": "^2.0",
@@ -18,7 +18,8 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "nesbot/carbon": "2.35.0 as 1.39.0",
-        "tcg/voyager": "^1.2"
+        "tcg/voyager": "^1.2",
+        "chartisan/php": "^1.2.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -39,12 +40,16 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [],
+            "providers": [
+                "ConsoleTVs\\Charts\\ChartsServiceProvider"
+            ]
         }
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "ConsoleTVs\\Charts\\": "src/"
         },
         "classmap": [
             "database/seeds",
