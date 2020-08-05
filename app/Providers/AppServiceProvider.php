@@ -27,7 +27,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         $charts->register([
-            \App\Charts\FirstChart::class
+            \App\Charts\FirstChart::class,
+            \App\Charts\PurchasesChart::class,
         ]);
     }
 }
