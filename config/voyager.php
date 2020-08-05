@@ -149,6 +149,7 @@ return [
             'TCG\\Voyager\\Widgets\\PageDimmer',
             'App\\Widgets\\ProductsDimmer',
             'App\\Widgets\\CategoryDimmer',
+            'App\\Widgets\\Purchases',
         ],
 
     ],
@@ -196,6 +197,11 @@ return [
 
     'additional_js' => [
         //'js/custom.js',
+    ],
+
+    'chartisan_js' => [
+      'js/echarts.min.js',
+      'js/chartisan_echarts.js',
     ],
 
     'googlemaps' => [

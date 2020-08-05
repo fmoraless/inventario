@@ -8,14 +8,14 @@ use Chartisan\PHP\Chartisan;
 use ConsoleTVs\Charts\BaseChart;
 use Illuminate\Http\Request;
 
-class FirstChart extends BaseChart
+class PurchasesChart extends BaseChart
 {
     /**
      * Determines the chart name to be used on the
      * route. If null, the name will be a snake_case
      * version of the class name.
      */
-    public ?string $name = 'firstchart';
+    public ?string $name = 'purchaseschart';
 
     /**
      * Determines the name suffix of the chart route.
@@ -23,7 +23,7 @@ class FirstChart extends BaseChart
      * from the blade directrive. If null, the chart
      * name will be used.
      */
-    public ?string $routeName = 'firstchart';
+    public ?string $routeName = 'purchaseschart';
 
     /**
      * Determines the prefix that will be used by the chart
@@ -35,7 +35,7 @@ class FirstChart extends BaseChart
      * Determines the middlewares that will be applied
      * to the chart endpoint.
      */
-    //public ?array $middlewares = ['auth'];
+    public ?array $middlewares = ['auth'];
 
     /**
      * Handles the HTTP request for the given chart.
@@ -45,8 +45,10 @@ class FirstChart extends BaseChart
     public function handler(Request $request): Chartisan
     {
         return Chartisan::build()
-            ->labels(['enero', 'febrero', 'marzo', 'abril'])
-            ->dataset('Compras', [1, 2, 3,4])
-            ->dataset('Ventas 2', [3, 2, 1,5]);
+            ->labels(['Enero', 'Febrero', 'Marzo', 'Abril'])
+            ->dataset('Compras1', [1, 2, 3, 4])
+            ->dataset('Compras2', [3, 2, 1, 2])
+            ->dataset('Compras3', [2, 2, 6, 3])
+            ;
     }
 }
