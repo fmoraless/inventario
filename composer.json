@@ -18,6 +18,7 @@
         "kylekatarnls/laravel-carbon-2": "^1.0.0",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
+        "laravelcollective/html": "^6.1",
         "maatwebsite/excel": "^3.1",
         "nesbot/carbon": "2.35.0 as 1.39.0",
         "tcg/voyager": "^1.2"
