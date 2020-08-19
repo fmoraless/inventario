@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Export;
+use Carbon\Carbon;
+use Maatwebsite\Excel\Facades\Excel;
+
+
 class ExporterController extends Controller
 {
     public function __construct (){
@@ -12,5 +17,18 @@ class ExporterController extends Controller
 
     public function index(){
         return view('exporter.form');
+    }
+
+    public function export() {
+        //validacion de modelo pendiente
+
+        $model = request('exportable');
+        $exportable = "App\\Exports\\{$model}";
+//        dd($exportable);
+        Export::create([
+            "model" => $exportable,
+            "created_at" => Carbon::now()
+        ]);
+        return Excel::download(new $exportable, "{$model}.xlsx");
     }
 }

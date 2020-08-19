@@ -16,29 +16,40 @@
 
 @section('content')
     <div class="page-content edit-add container-fluid">
+        @include('voyager::alerts')
         <div class="row">
             <div class="col-md-12">
-
                 <div class="panel panel-bordered">
                     <!-- form start -->
                     <div class="panel-body">
-                        <form action="">
+                        {!! Form::open([
+                            'route' => 'voyager.exports.download',
+                            'method' => 'POST'
+                            ]) !!}
                             <div class="row">
+                                @if(count($errors) > 0)
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                 @endif
                                 <div class="form-group col-md-2">
-                                    <select name="" id="" class="form-control">
-                                        <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
+                                    {!!
+                                        Form::select('exportable',[
+                                            'User' => 'Usuarios',
+                                            'Product' => 'Productos',
+                                            'Purchases' => 'Compras',
+                                        ], null, ['class' => 'form-control', 'style' => 'margin-top: 5px']);
+                                    !!}
                                 </div>
                                 <div class="form-group col-md-2">
-                                    <div class="btn btn-primary btn-md pull-right" type="submit">
-                                        primary
-                                    </div>
+                                    {!! Form::submit('Exportar datos', ['class' => 'btn btn-primary btn-block btn-md pull-right']) !!}
                                 </div>
                             </div>
-                        </form>
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>
