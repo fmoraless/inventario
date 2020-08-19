@@ -150,6 +150,7 @@ return [
             'App\\Widgets\\ProductsDimmer',
             'App\\Widgets\\CategoryDimmer',
             'App\\Widgets\\Purchases',
+            'App\\Widgets\\Purchases',
         ],
 
     ],
