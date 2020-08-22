@@ -41,7 +41,7 @@
                                         Form::select('exportable',[
                                             'User' => 'Usuarios',
                                             'Product' => 'Productos',
-                                            'Purchases' => 'Compras',
+                                            'Purchase' => 'Compras',
                                         ], null, ['class' => 'form-control', 'style' => 'margin-top: 5px']);
                                     !!}
                                 </div>
