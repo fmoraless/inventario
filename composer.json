@@ -10,16 +10,18 @@
     "require": {
         "php": "^7.4",
         "caouecs/laravel-lang": "~3.0",
+        "chartisan/php": "^1.2.0",
         "consoletvs/charts": "7.*",
+        "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3",
-        "fideloper/proxy": "^4.2",
         "kylekatarnls/laravel-carbon-2": "^1.0.0",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
+        "laravelcollective/html": "^6.1",
+        "maatwebsite/excel": "^3.1",
         "nesbot/carbon": "2.35.0 as 1.39.0",
-        "tcg/voyager": "^1.2",
-        "chartisan/php": "^1.2.0"
+        "tcg/voyager": "^1.2"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
