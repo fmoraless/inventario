@@ -16,7 +16,7 @@
                 hooks: new ChartisanHooks()
                 .legend({position: 'bottom'})
                 .title('Compras')
-                .datasets([{type: 'bar', fill: false,}, 'bar']),
+                .datasets([{type: 'bar', fill: true}, 'bar']),
             });
         </script>
     </div>

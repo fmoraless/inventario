@@ -8,14 +8,14 @@ use Chartisan\PHP\Chartisan;
 use ConsoleTVs\Charts\BaseChart;
 use Illuminate\Http\Request;
 
-class PurchasesChart extends BaseChart
+class SalesChart extends BaseChart
 {
     /**
      * Determines the chart name to be used on the
      * route. If null, the name will be a snake_case
      * version of the class name.
      */
-    public ?string $name = 'purchaseschart';
+    public ?string $name = 'saleschart';
 
     /**
      * Determines the name suffix of the chart route.
@@ -23,7 +23,7 @@ class PurchasesChart extends BaseChart
      * from the blade directrive. If null, the chart
      * name will be used.
      */
-    public ?string $routeName = 'purchaseschart';
+    public ?string $routeName = 'saleschart';
 
     /**
      * Determines the prefix that will be used by the chart
@@ -47,7 +47,9 @@ class PurchasesChart extends BaseChart
         return Chartisan::build()
             ->labels(['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
                 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'])
-            ->dataset('Compras1', (array)'counts')
+            ->dataset('Compras1', [1, 2, 3, 4])
+            ->dataset('Compras2', [3, 2, 1, 2])
+            ->dataset('Compras3', [2, 2, 6, 3])
             ;
     }
 }
