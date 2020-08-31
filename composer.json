@@ -21,6 +21,7 @@
         "laravelcollective/html": "^6.1",
         "maatwebsite/excel": "^3.1",
         "nesbot/carbon": "2.35.0 as 1.39.0",
+        "simplesoftwareio/simple-qrcode": "~3",
         "tcg/voyager": "^1.2"
     },
     "require-dev": {
