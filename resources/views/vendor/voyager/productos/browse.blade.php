@@ -253,7 +253,9 @@
                                                 @endif
                                             </td>
                                         @endforeach
-                                            <td>{!! QrCode::generate('Make me into a QrCode!'); !!}</td>
+{{--                                            @dd($data->id)--}}
+                                            <td>{!! QrCode::generate(Request::url().'/'.$data->id); !!}</td>
+
                                         <td class="no-sort no-click bread-actions">
                                             @foreach($actions as $action)
                                                 @if (!method_exists($action, 'massAction'))
@@ -263,6 +265,7 @@
                                         </td>
                                     </tr>
                                 @endforeach
+
                                 </tbody>
                             </table>
                         </div>

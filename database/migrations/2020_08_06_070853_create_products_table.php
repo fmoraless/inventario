@@ -26,6 +26,7 @@ class CreateProductsTable extends Migration
             $table->integer('stock_cur')->nullable();
             $table->integer('stock_min')->nullable();
             $table->date('expiry_date')->nullable();
+            $table->integer('rack_id')->nullable();
         });
     }
 
