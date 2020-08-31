@@ -149,8 +149,8 @@ return [
             'TCG\\Voyager\\Widgets\\PageDimmer',
             'App\\Widgets\\ProductsDimmer',
             'App\\Widgets\\CategoryDimmer',
-            'App\\Widgets\\Purchases',
-            'App\\Widgets\\SalesDimmer',
+            /*'App\\Widgets\\Purchases',
+            'App\\Widgets\\SalesDimmer',*/
         ],
 
     ],
